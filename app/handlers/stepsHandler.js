@@ -1,7 +1,7 @@
 import document from 'document';
 import {me} from "appbit";
 import clock from "clock";
-import {today} from "user-activity";
+import {goals, today} from "user-activity";
 import * as util from "../util";
 
 const stats = document.getElementById('stats');
@@ -20,9 +20,12 @@ export function initialize() {
 }
 
 const updateSteps = (defaultCount) => {
-    stepsText.text = defaultCount || util.thousandsSeparators((today?.adjusted?.steps || 0));
+    const currentSteps = today?.adjusted?.steps || 0;
+    stepsText.text = defaultCount || util.thousandsSeparators(currentSteps);
 
     steps.width = stepsText.getBBox().width + stepsImage.width;
     steps.x = stats.getBBox().width / 2 - (steps.width + stepsImage.width) / 2;
+
+    stepsImage.style.fill = currentSteps >= goals.steps ? 'aqua' : 'white';
 
 }
