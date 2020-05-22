@@ -1,0 +1,30 @@
+<svg id="clockFace">
+    <rect id="background"/>
+
+    <text id="dateText" class="light-text">N/A</text>
+
+    <rect class="divider divider-top"/>
+
+    <text id="timeText">--:--</text>
+    <text id="amPMText" x="$">A</text>
+
+    <rect class="divider divider-btm"/>
+
+    <svg id="stats">
+        <svg id="hrm">
+            <image id="hrmImage" href="images/heart_open.png" class="image">
+                <animate attributeName="opacity" begin="highlight" end="unload;unhighlight" from="1" to="0.5" dur="1"
+                         final="restore" repeatCount="indefinite"/>
+            </image>
+            <text id="hrmText">--</text>
+        </svg>
+        <svg id="steps">
+            <image id="stepsImage" href="images/steps.png" class="image"/>
+            <text id="stepsText">0</text>
+        </svg>
+        <svg id="weather" pointer-events="visible">
+            <image id="weatherImage" href="images/weather.png" class="image"/>
+            <text id="weatherText">--°</text>
+        </svg>
+    </svg>
+</svg>
