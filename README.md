@@ -3,4 +3,4 @@ This is a custom clock face for the Fitbit Ionic and is a combination of [Fitbit
 
 I created my own version in order to remove the activity switching (since I didn't care) and add weather instead of a battery level.
 
-This is mainly just for my use, but if anyone wants to download the source and install it themselves, you'll just need to add in a valid OpenWeatherMap API key in the `apiKey` variable inside `companion/index.js`.
+This is mainly just for my use, but if anyone wants to download the source and install it themselves, you'll just need to add in a valid OpenWeatherMap API key in the `apiKey` variable inside [companion/index.js](companion/index.js).
