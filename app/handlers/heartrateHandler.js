@@ -38,7 +38,7 @@ const handleUpdate = (data) => {
 }
 
 const getReading = () => {
-    heartRate = sensor.timestamp === lastReading ? '--' : sensor.heartRate;
+    heartRate = sensor.heartRate <= 0 ? "--" : sensor.heartRate;
 
     lastReading = sensor.timestamp;
 
